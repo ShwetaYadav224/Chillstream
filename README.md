@@ -36,16 +36,85 @@ Chillstream is a **Netflix-style streaming clone** built with React, TypeScript,
 
 ---
 
+## 🔗 Live Link
+
+[https://chillstream.pages.dev/](https://chillstream.pages.dev/)
+
+---
+
 ## 📦 Installation & Setup
 
-1. Clone the repository:
+Follow these steps to run **Chillstream** locally:
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/ShwetaYadav224/Chillstream.git
 cd Chillstream
-Make sure you have Node.js (v18+) and npm installed. Then run:
+````
+
+### 2. Install dependencies
+
+Make sure you have **Node.js (v18+)** and **npm** installed. Then run:
+
+```bash
 npm install
-Chillstream requires a TMDB API key. Create a .env file in the root directory:
+```
+
+### 3. Create a `.env` file
+
+Chillstream requires a **TMDB API key**. Create a `.env` file in the root directory:
+
+```bash
 touch .env
-Start the app locally
+```
+
+Add your API key inside `.env`:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+```
+
+> You can get your API key from [TMDB](https://www.themoviedb.org/).
+
+### 4. Start the development server
+
+```bash
 npm run dev
+```
+
+Open your browser at:
+
+```
+http://localhost:5173
+```
+
+### 5. Optional: Build for production
+
+```bash
+npm run build
+```
+
+This generates a production-ready `dist/` folder that can be deployed to **Vercel, Netlify**, or any static hosting platform.
+
+---
+
+## 📁 Project Structure
+
+```
+Chillstream/
+├── public/               # Static assets
+├── src/
+│   ├── api/              # TMDB API functions
+│   ├── components/       # Reusable React components
+│   ├── pages/            # Page-level components
+│   └── App.tsx           # Main React component
+├── .eslintrc.js          # ESLint configuration (type-aware rules)
+├── tsconfig.json         # TypeScript configuration
+├── vite.config.ts        # Vite configuration
+├── package.json          # NPM dependencies
+└── README.md             # Project documentation
+```
+
+
+
