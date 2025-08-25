@@ -1,69 +1,51 @@
-# React + TypeScript + Vite
+# 🎬 Chillstream
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chillstream is a **Netflix-style streaming clone** built with React, TypeScript, and Vite. It uses the **TMDB API** to fetch movies, TV shows, genres, and search results. Explore trending content, search for your favorites, and view detailed info including trailers and credits.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Browse **Popular, Top Rated, Trending, Now Playing, and Upcoming Movies**  
+- Explore **Popular, Top Rated, and On-Air TV Shows**  
+- **Search** for movies, TV shows, or both  
+- View **Movie/TV show details** with trailers, images, and credits  
+- Fully **responsive design** for mobile, tablet, and desktop  
+- **ESLint + TypeScript** for type-safe, maintainable, and production-ready code
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Layer              | Technology / Tool           |
+|-------------------|-----------------------------|
+| Frontend Library   | React                       |
+| Language           | TypeScript                  |
+| Bundler            | Vite                        |
+| Styling            | CSS                         |
+| API                | [TMDB API](https://developer.themoviedb.org/) |
+| Linting            | ESLint + type-aware rules, react-x & react-dom plugins |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 APIs Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **TMDB (The Movie Database) API**  
+  - Fetch movies, TV shows, genres, and search results  
+  - Image handling via TMDB base URL (`w500` for posters, `w1280` for backdrops)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📦 Installation & Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ShwetaYadav224/Chillstream.git
+cd Chillstream
+Make sure you have Node.js (v18+) and npm installed. Then run:
+npm install
+Chillstream requires a TMDB API key. Create a .env file in the root directory:
+touch .env
+Start the app locally
+npm run dev
